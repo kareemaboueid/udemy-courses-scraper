@@ -43,54 +43,58 @@ def convert_duration_to_minutes(duration_text):
 default_template = '''
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="./style.css" />
-        <title>%SCRIPT_NAME%</title>
-    </head>
-    <body>
-        <section class="operations_wrapper">
-            <button onclick="save_to_file()">Save</button>
-            <button onclick="window.close()">Close</button>
-        </section>
-        <section class="result_wrapper">
-            <div class="info_container">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>%SCRIPT_NAME%</title>
+</head>
+<body>
+    <section class="result_wrapper">
+        <section class="result_header">
+            <div>
                 <h1>Udemy sections successfully scraped</h1>
-                <div class="info_details">
-                    <p><strong>Script: </strong>%SCRIPT_NAME%</p>
-                    <p>
-                        <strong>Time: </strong>
-                        <span id="scraping_time">%TIME_TAKEN%</span>s
-                    </p>
-                    <p><strong>length: </strong>%DATA_LENGTH%</p>
-                </div>
-                <div class="info_details">
-                    <p>
-                        <strong>Course: </strong>
-                        <a href="%SCRAPING_URL%">%COURSE_NAME%</a>
-                    </p>
-                </div>
             </div>
-            <div class="separator"></div>
-            <div class="data_header">
-                <div class="title_header">
-                    <p>Title</p>
-                </div>
-                <div class="duration_header">
-                    <p>Duration</p>
-                </div>
+            <div class="result_header_actions">
+                <button onclick="save_to_file()">Save</button>
+                <button onclick="window.close()">Close</button>
             </div>
-            <div class="data_container">%ALL_DATA%</div>
         </section>
-        <footer>
-            <p>
-                Made by
-                <a href="https://github.com/kareemaboueid">Kareem Aboueid</a>
-            </p>
-        </footer>
-        <script src="./script.js"></script>
-    </body>
+        <div class="result_info">
+            <div class="info_details">
+                <p><strong>Script: </strong>%SCRIPT_NAME%</p>
+                <p>
+                    <strong>Time: </strong>
+                    <span id="scraping_time">%TIME_TAKEN%</span>s
+                </p>
+                <p><strong>length: </strong>%DATA_LENGTH%</p>
+            </div>
+            <div class="info_details">
+                <p>
+                    <strong>Course: </strong>
+                    <a href="%SCRAPING_URL%">%COURSE_NAME%</a>
+                </p>
+            </div>
+        </div>
+        <div class="separator"></div>
+        <div class="data_header">
+            <div class="title">
+                <p>Title</p>
+            </div>
+            <div class="duration">
+                <p>Duration</p>
+            </div>
+        </div>
+        <div class="result_body">%ALL_DATA%</div>
+    </section>
+    <footer>
+        <p>
+            Made by
+            <a href="https://github.com/kareemaboueid">Kareem Aboueid</a>
+        </p>
+    </footer>
+    <script src="./script.js"></script>
+</body>
 </html>
 '''
 
@@ -168,14 +172,14 @@ def scrape_sections(url, chromedriver_path="./chromedriver.exe"):
         html_output = []
         for idx, (title, mins) in enumerate(lectures, 1):
             html_output.append(f'''
-        <div class="single_data_section">
-            <div class="title">
-                <p onclick="copy_text(this)" class="txt">({idx}) {title}</p>
+            <div class="single_data_section">
+                <div class="title" title="Click to copy">
+                    <p onclick="copy_text(this)" class="txt">({idx}) {title}</p>
+                </div>
+                <div class="duration" title="Click to copy">
+                    <p onclick="copy_text(this)" class="txt">{mins}</p>
+                </div>
             </div>
-            <div class="duration">
-                <p onclick="copy_text(this)" class="txt">{mins}</p>
-            </div>
-        </div>
         ''')
 
         # Load template
