@@ -51,38 +51,47 @@ default_template = '''
 </head>
 <body>
     <section class="result_wrapper">
-        <section class="result_header">
-            <div>
-                <h1>Udemy sections successfully scraped</h1>
-            </div>
-            <div class="result_header_actions">
-                <button onclick="save_to_file()">Save</button>
-                <button onclick="window.close()">Close</button>
-            </div>
-        </section>
-        <div class="result_info">
-            <div class="info_details">
+    <div class="result_top">
+            <section class="result_header">
+                <div>
+                    <h1>Udemy sections successfully scraped</h1>
+                </div>
+                <div class="result_header_actions">
+                    <button onclick="save_to_file()">Save</button>
+                    <button onclick="window.close()">Exit</button>
+                </div>
+            </section>
+            <div class="result_info">
+                <div class="info_details">
                 <p><strong>Script: </strong>%SCRIPT_NAME%</p>
                 <p>
                     <strong>Time: </strong>
                     <span id="scraping_time">%TIME_TAKEN%</span>s
                 </p>
                 <p><strong>length: </strong>%DATA_LENGTH%</p>
-            </div>
-            <div class="info_details">
-                <p>
-                    <strong>Course: </strong>
-                    <a href="%SCRAPING_URL%">%COURSE_NAME%</a>
-                </p>
-            </div>
-        </div>
-        <div class="separator"></div>
-        <div class="data_header">
-            <div class="title">
-                <p>Title</p>
-            </div>
-            <div class="duration">
-                <p>Duration</p>
+                    <p><strong>Course: </strong><a style="cursor: pointer;"
+                            onclick="window.open('%SCRAPING_URL%', '_blank')">Open
+                            ↗</a></p>
+                </div>
+                <br />
+                <div class="data_header">
+                    <div class="title">
+                        <p>Title</p>
+                    </div>
+                    <div class="duration">
+                        <p>Duration</p>
+                    </div>
+                </div>
+                <div class="result_body">
+                    <div class="single_data_section">
+                        <div class="title" title="Click to copy">
+                            <a onclick="copy_text(this)" class="txt">%COURSE_NAME%</a>
+                        </div>
+                        <div class="duration" title="Click to copy">
+                            <p onclick="copy_text(this)" class="txt">%COURSE_TOTAL_DURATION%</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="result_body">%ALL_DATA%</div>
@@ -106,6 +115,7 @@ def scrape_sections(url, chromedriver_path="./chromedriver.exe"):
     script_name = os.path.basename(__file__)
     section_count = 0
     elapsed = 0
+    course_total_duration = 0
 
     print_agent("Initiating data extraction sequence...\n")
     print_agent("Open browser instance...")
@@ -166,6 +176,8 @@ def scrape_sections(url, chromedriver_path="./chromedriver.exe"):
         lectures = list(zip(lecture_titles, duration_minutes))
         section_count = len(lectures)
 
+        course_total_duration = sum(duration_minutes)
+
         # Prepare HTML block
         os.makedirs("./dist", exist_ok=True)
         output_path = "./dist/result.html"
@@ -192,6 +204,8 @@ def scrape_sections(url, chromedriver_path="./chromedriver.exe"):
 
         elapsed = round(time.time() - start_time, 2)
         template = template.replace("%SCRIPT_NAME%", script_name)
+        template = template.replace(
+            "%COURSE_TOTAL_DURATION%", str(course_total_duration))
         template = template.replace("%TIME_TAKEN%", str(elapsed))
         template = template.replace("%SCRAPING_URL%", url)
         template = template.replace(
