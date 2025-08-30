@@ -9,154 +9,73 @@
 </head>
 <body>
     <section class="result_wrapper">
-        <section class="result_header">
-            <div>
-                <h1>Udemy sections successfully scraped</h1>
-            </div>
-            <div class="result_header_actions">
-                <button onclick="save_to_file()">Save</button>
-                <button onclick="window.close()">Close</button>
-            </div>
-        </section>
-        <div class="result_info">
-            <div class="info_details">
+    <div class="result_top">
+            <section class="result_header">
+                <div>
+                    <h1>Udemy sections successfully scraped</h1>
+                </div>
+                <div class="result_header_actions">
+                    <button onclick="save_to_file()">Save</button>
+                    <button onclick="window.close()">Exit</button>
+                </div>
+            </section>
+            <div class="result_info">
+                <div class="info_details">
                 <p><strong>Script: </strong>udemy-courses-scraper.py</p>
                 <p>
                     <strong>Time: </strong>
-                    <span id="scraping_time">14.93</span>s
+                    <span id="scraping_time">9.09</span>s
                 </p>
-                <p><strong>length: </strong>46</p>
-            </div>
-            <div class="info_details">
-                <p>
-                    <strong>Course: </strong>
-                    <a href="https://www.udemy.com/course/machinelearning">Machine learning a-z: ai, python & r + chatgpt prize [2025]</a>
-                </p>
-            </div>
-        </div>
-        <div class="separator"></div>
-        <div class="data_header">
-            <div class="title">
-                <p>Title</p>
-            </div>
-            <div class="duration">
-                <p>Duration</p>
+                <p><strong>length: </strong>25</p>
+                    <p><strong>Course: </strong><a style="cursor: pointer;"
+                            onclick="window.open('https://www.udemy.com/course/beginning-c-plus-plus-programming/', '_blank')">Open
+                            ↗</a></p>
+                </div>
+                <br />
+                <div class="data_header">
+                    <div class="title">
+                        <p>Title</p>
+                    </div>
+                    <div class="duration">
+                        <p>Duration</p>
+                    </div>
+                </div>
+                <div class="result_body">
+                    <div class="single_data_section">
+                        <div class="title" title="Click to copy">
+                            <a onclick="copy_text(this)" class="txt">Beginning c++ programming - from beginner to beyond</a>
+                        </div>
+                        <div class="duration" title="Click to copy">
+                            <p onclick="copy_text(this)" class="txt">2751</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="result_body">
             <div class="single_data_section">
                 <div class="title" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">(1) Welcome to the course! Here we will help you get started in the best conditions.</p>
+                    <p onclick="copy_text(this)" class="txt">(1) Introduction</p>
                 </div>
                 <div class="duration" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">12</p>
+                    <p onclick="copy_text(this)" class="txt">20</p>
                 </div>
             </div>
         
 
             <div class="single_data_section">
                 <div class="title" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">(2) -------------------- Part 1: Data Preprocessing --------------------</p>
+                    <p onclick="copy_text(this)" class="txt">(2) Installation and Setup</p>
                 </div>
                 <div class="duration" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">10</p>
+                    <p onclick="copy_text(this)" class="txt">127</p>
                 </div>
             </div>
         
 
             <div class="single_data_section">
                 <div class="title" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">(3) Data Preprocessing in Python</p>
-                </div>
-                <div class="duration" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">92</p>
-                </div>
-            </div>
-        
-
-            <div class="single_data_section">
-                <div class="title" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">(4) Data Preprocessing in R</p>
-                </div>
-                <div class="duration" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">47</p>
-                </div>
-            </div>
-        
-
-            <div class="single_data_section">
-                <div class="title" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">(5) -------------------- Part 2: Regression --------------------</p>
-                </div>
-                <div class="duration" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">1</p>
-                </div>
-            </div>
-        
-
-            <div class="single_data_section">
-                <div class="title" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">(6) Simple Linear Regression</p>
-                </div>
-                <div class="duration" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">72</p>
-                </div>
-            </div>
-        
-
-            <div class="single_data_section">
-                <div class="title" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">(7) Multiple Linear Regression</p>
-                </div>
-                <div class="duration" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">136</p>
-                </div>
-            </div>
-        
-
-            <div class="single_data_section">
-                <div class="title" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">(8) Polynomial Regression</p>
-                </div>
-                <div class="duration" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">99</p>
-                </div>
-            </div>
-        
-
-            <div class="single_data_section">
-                <div class="title" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">(9) Support Vector Regression (SVR)</p>
-                </div>
-                <div class="duration" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">63</p>
-                </div>
-            </div>
-        
-
-            <div class="single_data_section">
-                <div class="title" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">(10) Decision Tree Regression</p>
-                </div>
-                <div class="duration" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">52</p>
-                </div>
-            </div>
-        
-
-            <div class="single_data_section">
-                <div class="title" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">(11) Random Forest Regression</p>
-                </div>
-                <div class="duration" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">36</p>
-                </div>
-            </div>
-        
-
-            <div class="single_data_section">
-                <div class="title" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">(12) Evaluating Regression Models Performance</p>
+                    <p onclick="copy_text(this)" class="txt">(3) Curriculum Overview</p>
                 </div>
                 <div class="duration" title="Click to copy">
                     <p onclick="copy_text(this)" class="txt">10</p>
@@ -166,167 +85,107 @@
 
             <div class="single_data_section">
                 <div class="title" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">(13) Regression Model Selection in Python</p>
+                    <p onclick="copy_text(this)" class="txt">(4) Getting Started</p>
                 </div>
                 <div class="duration" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">28</p>
+                    <p onclick="copy_text(this)" class="txt">70</p>
                 </div>
             </div>
         
 
             <div class="single_data_section">
                 <div class="title" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">(14) Regression Model Selection in R</p>
+                    <p onclick="copy_text(this)" class="txt">(5) Structure of a C++ Program</p>
                 </div>
                 <div class="duration" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">19</p>
+                    <p onclick="copy_text(this)" class="txt">43</p>
                 </div>
             </div>
         
 
             <div class="single_data_section">
                 <div class="title" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">(15) -------------------- Part 3: Classification --------------------</p>
+                    <p onclick="copy_text(this)" class="txt">(6) Variables and Constants</p>
                 </div>
                 <div class="duration" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">3</p>
+                    <p onclick="copy_text(this)" class="txt">73</p>
                 </div>
             </div>
         
 
             <div class="single_data_section">
                 <div class="title" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">(16) Logistic Regression</p>
+                    <p onclick="copy_text(this)" class="txt">(7) Arrays and Vectors</p>
                 </div>
                 <div class="duration" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">115</p>
+                    <p onclick="copy_text(this)" class="txt">56</p>
                 </div>
             </div>
         
 
             <div class="single_data_section">
                 <div class="title" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">(17) K-Nearest Neighbors (K-NN)</p>
+                    <p onclick="copy_text(this)" class="txt">(8) Statements and Operators</p>
                 </div>
                 <div class="duration" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">38</p>
+                    <p onclick="copy_text(this)" class="txt">108</p>
                 </div>
             </div>
         
 
             <div class="single_data_section">
                 <div class="title" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">(18) Support Vector Machine (SVM)</p>
+                    <p onclick="copy_text(this)" class="txt">(9) Controlling Program Flow</p>
                 </div>
                 <div class="duration" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">36</p>
+                    <p onclick="copy_text(this)" class="txt">208</p>
                 </div>
             </div>
         
 
             <div class="single_data_section">
                 <div class="title" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">(19) Kernel SVM</p>
+                    <p onclick="copy_text(this)" class="txt">(10) Characters and Strings</p>
                 </div>
                 <div class="duration" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">65</p>
+                    <p onclick="copy_text(this)" class="txt">78</p>
                 </div>
             </div>
         
 
             <div class="single_data_section">
                 <div class="title" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">(20) Naive Bayes</p>
+                    <p onclick="copy_text(this)" class="txt">(11) Functions</p>
                 </div>
                 <div class="duration" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">77</p>
+                    <p onclick="copy_text(this)" class="txt">171</p>
                 </div>
             </div>
         
 
             <div class="single_data_section">
                 <div class="title" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">(21) Decision Tree Classification</p>
+                    <p onclick="copy_text(this)" class="txt">(12) Pointers and References</p>
                 </div>
                 <div class="duration" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">38</p>
+                    <p onclick="copy_text(this)" class="txt">158</p>
                 </div>
             </div>
         
 
             <div class="single_data_section">
                 <div class="title" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">(22) Random Forest Classification</p>
+                    <p onclick="copy_text(this)" class="txt">(13) OOP - Classes and Objects</p>
                 </div>
                 <div class="duration" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">34</p>
+                    <p onclick="copy_text(this)" class="txt">251</p>
                 </div>
             </div>
         
 
             <div class="single_data_section">
                 <div class="title" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">(23) Classification Model Selection in Python</p>
-                </div>
-                <div class="duration" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">26</p>
-                </div>
-            </div>
-        
-
-            <div class="single_data_section">
-                <div class="title" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">(24) Evaluating Classification Models Performance</p>
-                </div>
-                <div class="duration" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">30</p>
-                </div>
-            </div>
-        
-
-            <div class="single_data_section">
-                <div class="title" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">(25) -------------------- Part 4: Clustering --------------------</p>
-                </div>
-                <div class="duration" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">1</p>
-                </div>
-            </div>
-        
-
-            <div class="single_data_section">
-                <div class="title" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">(26) K-Means Clustering</p>
-                </div>
-                <div class="duration" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">84</p>
-                </div>
-            </div>
-        
-
-            <div class="single_data_section">
-                <div class="title" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">(27) Hierarchical Clustering</p>
-                </div>
-                <div class="duration" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">81</p>
-                </div>
-            </div>
-        
-
-            <div class="single_data_section">
-                <div class="title" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">(28) -------------------- Part 5: Association Rule Learning --------------------</p>
-                </div>
-                <div class="duration" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">1</p>
-                </div>
-            </div>
-        
-
-            <div class="single_data_section">
-                <div class="title" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">(29) Apriori</p>
+                    <p onclick="copy_text(this)" class="txt">(14) Operator Overloading</p>
                 </div>
                 <div class="duration" title="Click to copy">
                     <p onclick="copy_text(this)" class="txt">130</p>
@@ -336,167 +195,107 @@
 
             <div class="single_data_section">
                 <div class="title" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">(30) Eclat</p>
+                    <p onclick="copy_text(this)" class="txt">(15) Inheritance</p>
                 </div>
                 <div class="duration" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">28</p>
+                    <p onclick="copy_text(this)" class="txt">144</p>
                 </div>
             </div>
         
 
             <div class="single_data_section">
                 <div class="title" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">(31) -------------------- Part 6: Reinforcement Learning --------------------</p>
+                    <p onclick="copy_text(this)" class="txt">(16) Polymorphism</p>
                 </div>
                 <div class="duration" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">1</p>
+                    <p onclick="copy_text(this)" class="txt">126</p>
                 </div>
             </div>
         
 
             <div class="single_data_section">
                 <div class="title" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">(32) Upper Confidence Bound (UCB)</p>
+                    <p onclick="copy_text(this)" class="txt">(17) Smart Pointers</p>
                 </div>
                 <div class="duration" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">142</p>
+                    <p onclick="copy_text(this)" class="txt">74</p>
                 </div>
             </div>
         
 
             <div class="single_data_section">
                 <div class="title" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">(33) Thompson Sampling</p>
+                    <p onclick="copy_text(this)" class="txt">(18) Exception Handling</p>
                 </div>
                 <div class="duration" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">90</p>
+                    <p onclick="copy_text(this)" class="txt">71</p>
                 </div>
             </div>
         
 
             <div class="single_data_section">
                 <div class="title" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">(34) -------------------- Part 7: Natural Language Processing --------------------</p>
+                    <p onclick="copy_text(this)" class="txt">(19) I/O and Streams</p>
                 </div>
                 <div class="duration" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">186</p>
+                    <p onclick="copy_text(this)" class="txt">182</p>
                 </div>
             </div>
         
 
             <div class="single_data_section">
                 <div class="title" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">(35) -------------------- Part 8: Deep Learning --------------------</p>
+                    <p onclick="copy_text(this)" class="txt">(20) The Standard Template Library (STL)</p>
                 </div>
                 <div class="duration" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">13</p>
+                    <p onclick="copy_text(this)" class="txt">318</p>
                 </div>
             </div>
         
 
             <div class="single_data_section">
                 <div class="title" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">(36) Artificial Neural Networks</p>
+                    <p onclick="copy_text(this)" class="txt">(21) Lambda Expressions</p>
                 </div>
                 <div class="duration" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">206</p>
+                    <p onclick="copy_text(this)" class="txt">122</p>
                 </div>
             </div>
         
 
             <div class="single_data_section">
                 <div class="title" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">(37) Convolutional Neural Networks</p>
+                    <p onclick="copy_text(this)" class="txt">(22) Bonus Section - Using Visual Studio Code</p>
                 </div>
                 <div class="duration" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">195</p>
+                    <p onclick="copy_text(this)" class="txt">96</p>
                 </div>
             </div>
         
 
             <div class="single_data_section">
                 <div class="title" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">(38) -------------------- Part 9: Dimensionality Reduction --------------------</p>
+                    <p onclick="copy_text(this)" class="txt">(23) Bonus Section - Enumerations</p>
                 </div>
                 <div class="duration" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">1</p>
+                    <p onclick="copy_text(this)" class="txt">53</p>
                 </div>
             </div>
         
 
             <div class="single_data_section">
                 <div class="title" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">(39) Principal Component Analysis (PCA)</p>
+                    <p onclick="copy_text(this)" class="txt">(24) ARCHIVED - OLD INSTALLATION VIDEOS</p>
                 </div>
                 <div class="duration" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">63</p>
+                    <p onclick="copy_text(this)" class="txt">61</p>
                 </div>
             </div>
         
 
             <div class="single_data_section">
                 <div class="title" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">(40) Linear Discriminant Analysis (LDA)</p>
-                </div>
-                <div class="duration" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">39</p>
-                </div>
-            </div>
-        
-
-            <div class="single_data_section">
-                <div class="title" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">(41) Kernel PCA</p>
-                </div>
-                <div class="duration" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">32</p>
-                </div>
-            </div>
-        
-
-            <div class="single_data_section">
-                <div class="title" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">(42) -------------------- Part 10: Model Selection & Boosting --------------------</p>
-                </div>
-                <div class="duration" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">1</p>
-                </div>
-            </div>
-        
-
-            <div class="single_data_section">
-                <div class="title" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">(43) Model Selection</p>
-                </div>
-                <div class="duration" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">83</p>
-                </div>
-            </div>
-        
-
-            <div class="single_data_section">
-                <div class="title" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">(44) XGBoost</p>
-                </div>
-                <div class="duration" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">34</p>
-                </div>
-            </div>
-        
-
-            <div class="single_data_section">
-                <div class="title" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">(45) Annex: Logistic Regression (Long Explanation)</p>
-                </div>
-                <div class="duration" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">17</p>
-                </div>
-            </div>
-        
-
-            <div class="single_data_section">
-                <div class="title" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">(46) Congratulations!! Don't forget your Prize :)</p>
+                    <p onclick="copy_text(this)" class="txt">(25) Extra Information - Source code, and other stuff</p>
                 </div>
                 <div class="duration" title="Click to copy">
                     <p onclick="copy_text(this)" class="txt">1</p>
