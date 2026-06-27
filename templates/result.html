@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../dist/style.css" />
+    <title>%SCRIPT_NAME%</title>
+</head>
+
+<body>
+
+    <section class="result_wrapper">
+
+        <div class="result_top">
+
+            <section class="result_header">
+
+                <div>
+                    <p style="font-size: 12px; padding: 0; margin: 0; color:#8a909d;">The following Udemy Course has
+                        Successfully
+                        Scraped</p>
+                    <p style="padding-bottom: 10px; text-overflow: ellipsis; font-size: 15px; font-weight: bold;">
+                        %COURSE_NAME%</p>
+                </div>
+
+            </section>
+
+            <div class="result_info">
+
+                <div class="info_details">
+
+                    <p>
+                        <strong>Sections:</strong>
+                        %TOTAL_SECTIONS%
+                    </p>
+
+                    <p>
+                        <strong>Lectures:</strong>
+                        %TOTAL_LECTURES%
+                    </p>
+
+                    <p>
+                        <strong>Duration:</strong>
+                        %TOTAL_DURATION%
+                    </p>
+
+                    <p>
+                        <strong>Course:</strong>
+                        <a href="%SCRAPING_URL%" target="_blank">
+                            Course Link
+                        </a>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="separator"></div>
+
+        <div class="data_header">
+
+            <div class="title">
+                <p>Title</p>
+            </div>
+
+            <div class="duration">
+                <p>Duration</p>
+            </div>
+
+        </div>
+
+        <div class="result_body">
+
+            %ALL_DATA%
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        <p>
+            Made by
+            <a href="https://github.com/kareemaboueid" target="_blank">
+                Kareem Aboueid
+            </a>
+        </p>
+
+    </footer>
+
+    <script src="../dist/script.js"></script>
+
+</body>
+
+</html>
