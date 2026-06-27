@@ -1,0 +1,7 @@
+logs/
+
+dist/result.html
+
+.venv
+
+__pycache__/

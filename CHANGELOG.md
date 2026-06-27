@@ -1,3 +1,5 @@
+(v2.0.0) added `.gitignore` file
+
 (v2.0.0) added both sections and lectures in the result file, updated the `README` file
 
 (v2.0.0) seprated old `udemy-courses-scraper.py` into organized modules
