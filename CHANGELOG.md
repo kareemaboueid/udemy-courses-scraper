@@ -1,5 +1,7 @@
 # CHANGELOG
 
+## (v2.0.2) implemented styles and js code in `templates/result.html`
+
 ## (v2.0.1) Changed app name to `scrap-udemy-course.py`
 
 ## (v2.0.0) added `.gitignore` file
