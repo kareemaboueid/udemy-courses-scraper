@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scrap-udemy-course"
+version = "2.1.0"
+description = "Scrape Udemy course curriculum into an HTML report."
+readme = "README.md"
+requires-python = ">=3.12"
+
+dependencies = [
+    "selenium>=4.45.0",
+]
+
+[project.scripts]
+scrap-udemy-course = "cli:main"
+
+[tool.setuptools]
+py-modules = ["cli"]
+
+[tool.setuptools.packages.find]
+include = ["modules*"]

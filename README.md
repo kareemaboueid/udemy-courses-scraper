@@ -14,29 +14,18 @@ A Python-based web automation script that extracts course sections and durations
 
 ## Installation
 
-1. Clone the repository or download the source code.
-2. Install Python dependencies:
-
 ```bash
-pip install -r requirements.txt
-```
+git clone ...
+cd scrap-udemy-course
 
-**Note:** Ensure the correct version of chromedriver.exe is placed in the project root. It must match the version of your installed Chrome browser.
+pip install -e .
+```
 
 ## Usage
 
-Click on the udemy-courses-scraper.py file to run it.
-
-A terminal window will open, prompting you to enter a valid Udemy course URL.
-
-Type the URL in the terminal and press Enter.
-The script will then execute the following steps:
-
-1. Launch a Chrome browser instance using Selenium.
-2. Navigate to the provided Udemy course URL.
-3. Scrape all visible course sections, lectures and their durations.
-4. Write the scraped data into `dist/result.html`.
-5. Open the generated report in your default web browser.
+```bash
+scrap-udemy-course
+```
 
 ## Requirements
 

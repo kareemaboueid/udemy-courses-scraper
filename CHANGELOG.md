@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## (v2.1.0)
+
+- Converted project into an installable CLI application.
+- Added pyproject.toml.
+- Added console command scrap-udemy-course.
+- Improved HTML report.
+- Added curriculum toggle.
+- Modernized project structure.
+
 ## (v2.0.3) removed logs mkdir function
 
 ## (v2.0.3) updated html template in `html_builder.py`
