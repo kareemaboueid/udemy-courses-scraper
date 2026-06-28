@@ -29,9 +29,6 @@ from modules.html_builder import (
     build_and_save_html,
 )
 
-from modules.logger import (
-    write_log,
-)
 
 from modules.utils import (
     print_agent,
@@ -114,14 +111,6 @@ def main() -> None:
         report_path = build_and_save_html(
             course=course,
             script_name=script_name,
-            elapsed_time=elapsed_time,
-        )
-
-        write_log(
-            script_name=script_name,
-            url=url,
-            sections=course.total_sections,
-            lectures=course.total_lectures,
             elapsed_time=elapsed_time,
         )
 

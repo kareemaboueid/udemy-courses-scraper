@@ -11,7 +11,6 @@ A Python-based web automation script that extracts course sections and durations
   - Execution metadata (script name, time, number of sections)
   - Copy-to-clipboard functionality for section and lectures titles and durations
 - Automatically opens the result in the browser after scraping
-- Logs each run with timestamp, URL, script name, and processing time
 
 ## Installation
 
@@ -38,7 +37,6 @@ The script will then execute the following steps:
 3. Scrape all visible course sections, lectures and their durations.
 4. Write the scraped data into `dist/result.html`.
 5. Open the generated report in your default web browser.
-6. Log the run details in `logs/log.txt`.
 
 ## Requirements
 
