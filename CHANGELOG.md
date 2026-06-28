@@ -1,5 +1,7 @@
 # CHANGELOG
 
+## (v2.0.3) removed logs mkdir function
+
 ## (v2.0.3) updated html template in `html_builder.py`
 
 ## (v2.0.2) removed logs

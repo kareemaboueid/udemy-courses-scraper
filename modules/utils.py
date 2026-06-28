@@ -81,11 +81,6 @@ def ensure_directories() -> None:
         exist_ok=True,
     )
 
-    config.LOG_DIR.mkdir(
-        parents=True,
-        exist_ok=True,
-    )
-
 
 def write_text_file(
     path: Path,
