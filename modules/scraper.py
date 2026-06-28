@@ -318,7 +318,7 @@ def _scrape_sections(
 
     for section_index, section_element in enumerate(
         section_elements,
-        start=1,
+        start=0,
     ):
 
         section = _scrape_section(

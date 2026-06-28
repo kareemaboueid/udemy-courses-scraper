@@ -1,5 +1,7 @@
 # CHANGELOG
 
+## (v2.0.3) updated html template in `html_builder.py`
+
 ## (v2.0.2) removed logs
 
 ## (v2.0.2) implemented styles and js code in `templates/result.html`

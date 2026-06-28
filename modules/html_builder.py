@@ -131,15 +131,15 @@ def _build_section(
 
     return f"""
         <div class="course_section">
-
             <div class="single_data_section section">
+                    <div class="title" title="Click to copy">
+                        <p onclick="copy_text(this)" class="txt">{section.index}. {escape_html(section.title)}</p>
+                    </div>
 
-                <div class="title" title="Click to copy">
-                    <p onclick="copy_text(this)" class="txt">Section {section.index}: {escape_html(section.title)}</p>
+                    <div class="duration" title="Click to copy">
+                        <p onclick="copy_text(this)" class="txt">{section.total_duration}</p>
+                    </div>
                 </div>
-
-            </div>
-
             <div class="section_lectures">
 
                 {lectures_html}
