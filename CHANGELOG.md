@@ -1,5 +1,7 @@
 # CHANGELOG
 
+## added MIT license, and polished `README`
+
 ## (v2.1.0)
 
 - Converted project into an installable CLI application.

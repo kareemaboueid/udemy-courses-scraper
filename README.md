@@ -56,6 +56,9 @@ Enter the Udemy course URL when prompted.
 
 ## Author
 
-**Kareem Aboueid**
+Kareem Aboueid
+GitHub: <https://github.com/kareemaboueid>
 
-GitHub: https://github.com/kareemaboueid
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
