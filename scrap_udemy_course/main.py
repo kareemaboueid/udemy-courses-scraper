@@ -16,26 +16,26 @@ import sys
 import time
 import webbrowser
 
-from modules.browser import (
+from .browser import (
     create_driver,
     close_driver,
 )
 
-from modules.scraper import (
+from .scraper import (
     scrape_course,
 )
 
-from modules.html_builder import (
+from .html_builder import (
     build_and_save_html,
 )
 
 
-from modules.utils import (
+from .utils import (
     print_agent,
     is_valid_udemy_course_url,
 )
 
-from modules.config import (
+from .config import (
     OUTPUT_HTML,
 )
 

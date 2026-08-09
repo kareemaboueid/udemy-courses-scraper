@@ -27,11 +27,11 @@ from selenium.common.exceptions import (
     NoSuchElementException,
 )
 
-from modules.config import (
+from .config import (
     WAIT_TIMEOUT,
 )
 
-from modules.selectors import (
+from .selectors import (
     COURSE_TITLE,
     SECTION,
     SECTION_HEADER,
@@ -41,13 +41,13 @@ from modules.selectors import (
     LECTURE_DURATION,
 )
 
-from modules.models import (
+from .models import (
     Course,
     Section,
     Lecture,
 )
 
-from modules.utils import (
+from .utils import (
     print_agent,
     safe_find_text,
     parse_section_statistics,

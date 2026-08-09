@@ -18,6 +18,4 @@ scrap-udemy-course = "cli:main"
 
 [tool.setuptools]
 py-modules = ["cli"]
-
-[tool.setuptools.packages.find]
-include = ["modules*"]
+packages = ["scrap_udemy_course"]

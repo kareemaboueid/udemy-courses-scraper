@@ -19,7 +19,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from modules.config import (
+from .config import (
     HTML_TEMPLATE,
     OUTPUT_HTML,
     PLACEHOLDER_SCRIPT_NAME,
@@ -34,13 +34,13 @@ from modules.config import (
     PLACEHOLDER_TOTAL_DURATION,
 )
 
-from modules.models import (
+from .models import (
     Course,
     Section,
     Lecture,
 )
 
-from modules.utils import (
+from .utils import (
     escape_html,
     minutes_to_string,
     ensure_directories,

@@ -18,14 +18,14 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.remote.webdriver import WebDriver
 from selenium.common.exceptions import WebDriverException
 
-from modules.config import (
+from .config import (
     CHROMEDRIVER_PATH,
     BROWSER_WIDTH,
     BROWSER_HEIGHT,
     HEADLESS,
 )
 
-from modules.utils import print_agent
+from .utils import print_agent
 
 
 # ============================================================================
@@ -65,24 +65,38 @@ def create_driver() -> WebDriver:
         "Starting Chrome..."
     )
 
-    service = Service(
-        CHROMEDRIVER_PATH,
-    )
+    options = _build_options()
+
+    if CHROMEDRIVER_PATH.exists():
+        try:
+            return webdriver.Chrome(
+                service=Service(CHROMEDRIVER_PATH),
+                options=options,
+            )
+        except WebDriverException as e:
+            message = str(e)
+
+            if (
+                "This version of ChromeDriver only supports Chrome version" in message
+                or "session not created" in message
+                or "ChromeDriver executable needs to be available" in message
+            ):
+                print_agent(
+                    "Local ChromeDriver is incompatible. Falling back to Selenium Manager..."
+                )
+            else:
+                raise RuntimeError(
+                    f"Failed to initialize ChromeDriver:\n{e}"
+                ) from e
 
     try:
-
-        driver = webdriver.Chrome(
-            service=service,
-            options=_build_options(),
+        return webdriver.Chrome(
+            options=options,
         )
-
     except WebDriverException as e:
-
         raise RuntimeError(
-            f"Failed to initialize ChromeDriver:\n{e}"
+            f"Failed to initialize ChromeDriver with Selenium Manager:\n{e}"
         ) from e
-
-    return driver
 
 
 # ============================================================================

@@ -2,6 +2,11 @@
 
 ## added MIT license, and polished `README`
 
+## (v2.1.1)
+
+- Fixed CLI package entrypoint imports so `scrap-udemy-course` loads the installed package correctly.
+- Added ChromeDriver fallback support: use bundled driver first, then Selenium Manager if the local driver is incompatible.
+
 ## (v2.1.0)
 
 - Converted project into an installable CLI application.
